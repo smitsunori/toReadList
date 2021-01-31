@@ -1,0 +1,372 @@
+@charset "utf-8";
+
+//================================
+//PARTS
+//================================
+.l-main {
+  padding-top: 100px;
+  padding-bottom: 189px;
+  @media screen and (max-width: $breakPointSml + px){
+    padding-top: 110px;
+    padding-bottom: 106px;
+  }
+}
+
+.l-inner {
+  max-width: 1172px;
+  padding-right: 31px;
+  padding-left: 31px;
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (max-width: $breakPointTablet + px){
+
+  }
+  @media screen and (max-width: $breakPointSml + px){
+
+  }
+  &--full {
+    max-width: 100%;
+    padding-right: 32px;
+    padding-left: 32px;
+    @media screen and (max-width: $breakPointSml + px){
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+  }
+  &__inside {
+    width: 74.404%;
+    @media screen and (max-width: $breakPointTablet + px){
+      width: 100%;
+      max-width: 761px;
+    }
+    @media screen and (max-width: $breakPointSml + px){
+      width: 100%;
+    }
+  }
+}
+
+.l-pagehead {
+  padding-top: 100px;
+  margin-bottom: 31px;
+  @media screen and (max-width: $breakPointSml + px){
+    padding-top: 0;
+  }
+  .l-inner {
+    position: relative;
+  }
+  .c-breadcrumb {
+    position: absolute;
+    left: 28px;
+    top: -115px;
+    @media screen and (max-width: $breakPointSml + px){
+      top: -80px;
+      left: 24px;
+    }
+  }
+}
+
+.l-pagebody {
+
+}
+
+.l-col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  word-break: break-all;
+  &--has-itemmaxwidth {
+    //justify-content: space-between;
+    .l-col__item--col-2 {
+      //max-width: 472px;
+    }
+    .l-col__item--col-3 {
+      //max-width: 280px;
+      //max-width: 312px;
+    }
+  }
+  &__item {
+    transition: opacity .8s ease-out;
+    &.is-hide {
+      opacity: 0;
+    }
+    &--col-2 {
+      width: calc(50% - 15px);
+      margin-left: 30px;
+      &:nth-child(2n-1) {
+        margin-left: 0;
+      }
+      &:nth-child(n+3) {
+        @media screen and (min-width: $breakPointSml + 1 + px){
+          margin-top: 87px;
+        }
+
+      }
+      @media screen and (max-width: $breakPointSml + px){
+        width: 100%;
+        margin-left: 0%;
+        & + & {
+          margin-top: 45px;
+        }
+      }
+    }
+    &--col-3 {
+      width: 31.74%;
+      margin-left: 2.388%;
+      &:nth-child(3n-2) {
+        @media screen and (min-width: $breakPointSml + 1 + px){
+          margin-left: 0;
+        }
+      }
+      &:nth-child(n+4) {
+        @media screen and (min-width: $breakPointSml + 1 + px){
+          margin-top: 35px;
+        }
+      }
+      @media screen and (max-width: $breakPointSml + px){
+        width: calc(50% - 10px);
+        margin-left: 20px;
+        &:nth-child(2n-1) {
+          margin-left: 0;
+        }
+        &:nth-child(n+3) {
+          margin-top: 30px;
+        }
+      }
+    }
+    &--col-4 {
+      width: 23.209%;
+      margin-left: 2.388%;
+      //1024 ~ 600の間は3colに
+      @media screen and (max-width: $breakPointTablet + px) and (min-width: $breakPointSml + 1 + px){
+        width: 31.74%;
+        margin-left: 2.388%;
+        &:nth-child(3n-2) {
+          @media screen and (min-width: $breakPointSml + 1 + px){
+            margin-left: 0;
+          }
+        }
+      }
+      @media screen and (max-width: $breakPointSml + px){
+        width: calc(50% - 10px);
+        margin-left: 20px;
+        &:nth-child(2n-1) {
+          margin-left: 0;
+        }
+        &:nth-child(n+3) {
+          margin-top: 30px;
+        }
+      }
+      &:nth-child(4n-3) {
+        margin-left: 0;
+      }
+      &:nth-child(n+5) {
+        margin-top: 35px;
+      }
+    }
+    &--col-1-2 {
+      margin-bottom: 0;
+      &:nth-child(1) {
+        width: 25.598%;
+        @media screen and (max-width: $breakPointSml + px){
+          width: 100%;
+        }
+      }
+      &:nth-child(2) {
+        width: 74.402%;
+        @media screen and (max-width: $breakPointSml + px){
+          width: 100%;
+        }
+      }
+
+
+    }
+  }
+}
+
+.l-productlist {
+  &__item {
+    & + & {
+      margin-top: 144px;
+      @media screen and (max-width: $breakPointSml + px){
+        margin-top: 131px;
+      }
+    }
+  }
+}
+
+
+.l-productsection {
+  &__title {
+    width: 190px;
+    min-height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px;
+    background-color: $light;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 18px;
+    @media screen and (max-width: $breakPointSml + px){
+      width: 149px;
+      min-height: 40px;
+      margin-bottom: 57px;
+      font-size: 14px;
+    }
+
+
+  }
+  & + & {
+    margin-top: 250px;
+    @media screen and (max-width: $breakPointSml + px){
+      margin-top: 135px;
+    }
+  }
+}
+
+
+.l-sidebarlayout {
+  display:flex;
+  justify-content: space-between;
+  align-items: stretch;
+  @media screen and (max-width: $breakPointTablet + px){
+    display: block;
+  }
+  &__main {
+    width: calc(100% - 372px);
+    padding-right: 28px;
+    @media screen and (max-width: $breakPointTablet + px){
+      width: 100%;
+      max-width: 100%;
+      padding-right: 0;
+    }
+  }
+  &__side {
+    width: 372px;
+    @media screen and (max-width: $breakPointTablet + px){
+      width: 100%;
+      margin-top: 44px;
+    }
+  }
+  &__sidetitle {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 200;
+    @media screen and (max-width: $breakPointSml + px){
+      margin-bottom: 23px;
+      font-size: 20px;
+    }
+  }
+  &--newsdetail {
+    .l-sidebarlayout__main {
+      width: calc(100% - 272px);
+      width: calc(100% - 4.436% - 272px);
+      padding-right: 0;
+      @media screen and (max-width: $breakPointTablet + px){
+        width: 100%;
+        padding-right: 0;
+      }
+    }
+    .l-sidebarlayout__side {
+      width: 272px;
+      @media screen and (max-width: $breakPointTablet + px){
+        width: 100%;
+      }
+    }
+  }
+}
+
+.l-exhibition-artistlist {
+  word-break: break-all;
+  &__item {
+    margin-top: 35px;
+    @media screen and (max-width: $breakPointSml + px){
+      margin-top: 36px;
+    }
+  }
+}
+
+.l-pastlist {
+  margin-top:0;
+  margin-bottom: 24px;
+  @media screen and (max-width: $breakPointSml + px){
+    margin-bottom: 26px;
+  }
+  &__item {
+
+    &:last-child {
+
+    }
+  }
+}
+
+.l-hasvertical {
+  position: relative;
+  &__item {
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 4px;
+    right: -12px;
+    height: 100%;
+    font-size: 18px;
+    color: $baseColor;
+    @media screen and (max-width: $breakPointSml + px){
+      display: none;
+    }
+  }
+  &__text {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 144px;
+    display: inline;
+    margin: 0;
+    padding-bottom: 100px;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    font-weight: 300;
+  }
+
+}
+
+.l-flowlist {
+  margin-bottom: 0;
+  &__item {
+
+    &:last-child {
+
+    }
+  }
+}
+
+.l-reservationlist {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  @media screen and (max-width: $breakPointSml + px){
+    display: block;
+  }
+  &__item {
+    max-width: 272px;
+    width: calc(50% - 14px);
+    @media screen and (max-width: $breakPointSml + px){
+      width: 100%;
+      max-width: 280px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    & + & {
+      margin-left: 28px;
+      @media screen and (max-width: $breakPointSml + px){
+        margin-left: auto;
+        margin-top: 30px;
+      }
+
+    }
+  }
+}

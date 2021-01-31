@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+//================================
+//PARTS
+//================================
+.sitefooter {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 66px;
+  color: $white;
+  background-color: $baseColor;
+  letter-spacing: 0.04em;
+  @media screen and (max-width: $breakPointSml + px){
+    padding-top: 28px;
+    padding-bottom: 29px;
+  }
+  .sitefooter__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    //padding-bottom: 55px;
+    @media screen and (max-width: 1100 + px){
+      display: block;
+    }
+    @media screen and (max-width: $breakPointSml + px){
+      display: block;
+      //padding-bottom: 0;
+    }
+  }
+  &__head {
+    margin-bottom: 37px;
+  }
+  &__sns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 12px;
+    @media screen and (max-width: $breakPointSml + px){
+      margin-top: -8px;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    transition: opacity .2s ease-out;
+    @media screen and (max-width: $breakPointSml + px){
+      margin-bottom: 12px;
+    }
+    &:hover {
+      opacity: .6;
+    }
+    img {
+      @media screen and (max-width: $breakPointSml + px){
+        width: 196px;
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-bottom: 126px;
+    @media screen and (max-width: 1100 + px){
+      //justify-content: space-between;
+    }
+    @media screen and (max-width: $breakPointSml + px){
+      justify-content: space-between;
+      padding-bottom: 66px;
+    }
+    .footernav {
+
+    }
+    .footerstore {
+      margin-left: 67px;
+      text-align: right;
+      @media screen and (max-width: $breakPointSml + px){
+        margin-left: 0;
+        font-size: 18px;
+      }
+      .onlinestorelist {
+        margin-top: -8px;
+      }
+    }
+    .footernav-sub {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @media screen and (max-width: $breakPointSml + px){
+        left: 0;
+        right: initial;
+      }
+    }
+  }
+
+  &__pagetop {
+    /*
+    width: 45px;
+    height: 45px;
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    right: 17px;
+    padding-top: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease-out;
+    body.is-scrolled & {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    body.is-footer-visible & {
+      position: absolute;
+      top: -53px;
+      bottom: initial;
+    }
+    body.is-scrolled &:hover {
+      @media screen and (min-width: $breakPointSml + 1 + px){
+        opacity: .6!important;
+      }
+    }
+    &:before {
+      content:'';
+      display: block;
+      width: 22px;
+      height: 22px;
+      border-top: 1px solid #333333;
+      border-right: 1px solid #333333;
+      transform: rotate(-45deg);
+      margin: 0 auto;
+    }*/
+  }
+  .footercompany {
+    margin-top: -53px;
+    @media screen and (max-width: $breakPointSml + px){
+      margin-top: 85px;
+    }
+  }
+}
+
+.footernav {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @media screen and (max-width: $breakPointSml + px){
+    flex-direction: column;
+
+    font-size: 18px;
+  }
+
+  &__item {
+    margin-left: 45px;
+    @media screen and (max-width: $breakPointSml + px){
+      margin-left: 0;
+      margin-bottom: 21px;
+    }
+    a {
+      display: inline-block;
+      padding: 2px 0;
+      transition: opacity .2s ease-out;
+      &:hover {
+        @media screen and (min-width: $breakPointSml + 1 + px){
+          opacity: .6;
+        }
+      }
+    }
+  }
+}
+
+.footernav-sub {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 12px;
+  @media screen and (max-width: $breakPointSml + px){
+    display: block;
+  }
+  &__item {
+    margin-left: 40px;
+    @media screen and (max-width: $breakPointSml + px){
+      margin-left: 0;
+    }
+    & + & {
+      @media screen and (max-width: $breakPointSml + px){
+        margin-top: 14px;
+      }
+    }
+  }
+}
+
+.footernavchild {
+  font-size: 12px;
+  @media screen and (max-width: $breakPointSml + px){
+    font-size: 14px;
+  }
+}
+
+.onlinestorelist {
+  &__item {
+    & + & {
+      margin-top: 12px;
+    }
+    img {
+      @media screen and (max-width: $breakPointSml + px){
+        width: 149px;
+      }
+    }
+  }
+}
+
+.footercompany {
+  position: relative;
+  p {
+    margin-bottom: 0;
+  }
+  .copyright {
+    margin-top: 7px;
+    font-size: 12px;
+    @media screen and (max-width: $breakPointSml + px){
+      margin-top: 0;
+      font-size: 10px;
+    }
+  }
+
+
+}

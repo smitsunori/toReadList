@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+
+.base-content {
+  letter-spacing: 0.05em;
+  color: $black;
+  word-break: break-all;
+  h2, h3, h4, h5, h6 {
+    line-height: 1.5;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  h2 {
+    margin-top: 2em;
+    margin-bottom: 1.1em;
+    font-size: 14px;
+    @media screen and (max-width: $breakPointSml + px) {
+      //margin-top: 2.6em;
+      //font-size: 18px;
+    }
+    & + h3, & + h4, &+ h6 {
+      margin-top: 1.8em;
+    }
+  }
+  h3 {
+    position: relative;
+    margin-top: 3.1em;
+    margin-bottom: 2em;
+    font-size: 14px;
+    & + h3, & + h4, &+ h6 {
+      margin-top: 1.8em;
+    }
+    @media screen and (max-width: $breakPointSml + px) {
+
+    }
+  }
+  h4, h5, h6 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  a {
+    color: $baseColor;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  figure {
+    margin-bottom: 2em;
+  }
+  p {
+    margin-bottom: 2em;
+    @media screen and (max-width: $breakPointSml + px){
+      margin-bottom: 1.6em;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    img:first-child {
+      margin-top: 0;
+    }
+    img:last-child {
+      margin-bottom: 0;
+    }
+    &.caption {
+      margin-top: -18px;
+      margin-bottom: 1.7em;
+      font-size: 13px;
+      line-height: 1.6;
+      @media screen and (max-width: $breakPointSml + px) {
+        margin-top: -15px;
+        margin-bottom: 2em;
+        font-size: 12px;
+      }
+    }
+  }
+  figure {
+    margin-bottom: 1.4em;
+    @media screen and (max-width: $breakPointSml + px){
+      margin-bottom: 2.2em;
+    }
+    & + figure {
+      margin-top: 2.8em;
+      @media screen and (max-width: $breakPointSml + px){
+        margin-top: 2.2em;
+      }
+    }
+  }
+
+  .size75 img{
+    width: 75%;
+  }
+  .size50 img{
+    width: 50%;
+  }
+  .size25 img{
+    width: 25%;
+  }
+  .alignright img {
+    float: right;
+  }
+  .aligncenter {
+    text-align: center;
+  }
+
+  .box {
+    border-radius: 0;
+    margin-top: 2.2em;
+    margin-bottom: 2.4em;
+    padding: 22px 27px 22px;
+    @media screen and (max-width: $breakPointSml + px) {
+      padding: 19px 24px 18px;
+    }
+    h2 {
+
+    }
+    h3:not(:first-child) {
+      margin-top: 2.7em;
+    }
+    & + h2 {
+      margin-top: 2.4em;
+    }
+    & + h3, & + h4, & + h6 {
+      margin-top: 2.8em;
+    }
+    p:last-child {
+      margin-bottom: 0!important;
+    }
+  }
+  figcaption, .note{
+    font-size: 10px;
+  }
+  figcaption {
+    //line-height: 1.6;
+    //padding-top: 9px;
+    @media screen and (max-width: $breakPointSml + px) {
+      //padding-top: 6px;
+    }
+  }
+  .box + .caption {
+    margin-top: -20px;
+  }
+  hr {
+    margin-top: 32px;
+    margin-bottom: 33px;
+  }
+}
+
+.base-content-h3 {
+  position: relative;
+  margin-top: 2.6em;
+  margin-bottom: 1.4em;
+  padding-left: 14px;
+  font-size: 18px;
+  @media screen and (max-width: $breakPointSml + px) {
+    font-size: 15px;
+  }
+  &::before {
+    content:'';
+    display: block;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: #333;
+  }
+}

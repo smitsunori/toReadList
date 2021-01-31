@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+.sitemenu {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top:0;
+  right:0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba($baseColor, .95);
+  color: #fff;
+  font-weight: 500;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  @media screen and (max-width: $breakPointSml + px){
+    width: 100%;
+  }
+  &__overlay {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    //transform: translateX(-100%);
+  }
+  .l-inner {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .l-container__inner {
+    max-width: 480px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+  }
+  &__content {
+    padding-top: 90px;
+    position: relative;
+    height: 100%;
+    min-height: 920px;
+    @media screen and (max-width: $breakPointSml + px){
+      padding-top: 50px;
+      min-height: 680px;
+    }
+  }
+  &__logo {
+    display:block;
+    //margin-bottom: 48px;
+  }
+  &__inner {
+    @media screen and (max-width: $breakPointSml + px){
+      //margin-left: 85px;
+    }
+  }
+  &__nav {
+    margin-bottom: 0;
+    font-size: 24px;
+  }
+  &__subnav {
+    position: absolute;
+    bottom: 96px;
+    left: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__sns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    bottom: 96px;
+    right: 40px;
+  }
+
+}
+
+
+.menunav {
+  margin-top: 0;
+  margin-bottom:0;
+  font-size: 36px;
+  @media screen and (max-width: $breakPointSml + px){
+    font-size: 24px;
+  }
+  &__item {
+    margin-bottom: 5px;
+    a {
+      display: inline-block;
+      padding: 4px 0;
+    }
+    &--products {
+      .menunavchild {
+        font-size: 18px;
+        @media screen and (max-width: $breakPointSml + px){
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.menunavchild {
+  margin-top: -9px;
+  font-size: 16px;
+  @media screen and (max-width: $breakPointSml + px){
+    margin-top: 0;
+  }
+  &__item {
+
+    a {
+      display: inline-block;
+      position: relative;
+    }
+    &.is-new a:after {
+      content:'NEW';
+      display: block;
+      position: absolute;
+      top: 50%;
+      margin-top: -13px;
+      right: -65px;
+      width: 56px;
+      height: 26px;
+      background-color: $light;
+      border-radius: 14px;
+      text-align: center;
+      padding-top: 1px;
+      color: $baseColor;
+      font-size: 14px;
+    }
+  }
+}

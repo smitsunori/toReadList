@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+$breakPointSml: 600;
+$breakPointTablet-Sml: 768;
+$breakPointTablet: 1024;
+$breakPointStandard: 1280;
+$breakPointDesktop: 1440;
+$breakPointLarge: 1920;
+
+$baseColorPale: #D3C8B8;
+$baseColor: #645E55;
+$light: #F8F5F0;
+$disabled: #E5DFD6;
+$gold: #847257;
+
+
+
+$black: #000;
+$white: #fff;
+$bgColor: #F0EBE3;
+
+$easeInOutQuad: cubic-bezier(0.45, 0, 0.55, 1);
+$easeInOutCubic: cubic-bezier(0.65, 0, 0.35, 1);
+$easeOutCubic: cubic-bezier(0.33, 1, 0.68, 1);
+$easeInOutQuart: cubic-bezier(0.76, 0, 0.24, 1);
+
+//@import 'swiper.min';
+@import 'base';
+/*
+@import 'base';
+@import 'component';
+@import 'layout';
+
+@import 'header';
+@import 'footer';
+@import 'menu';
+
+@import 'base-content';
+
+@import 'home';
+@import 'news';
+@import 'faq';
+@import 'product';
+@import 'about';
+
+@import 'heroslider';
+@import 'loading';
+*/
